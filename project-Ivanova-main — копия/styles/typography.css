@@ -1,0 +1,21 @@
+.conteiner{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.button{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #0F2336;
+    border: 1px solid #00CCCC;
+    border-radius: 14px;
+    background-color:#00CCCC;
+}
+.button--login{
+
+   color: white;
+
+    border: none;
+    background-color: black;
+}
+    
