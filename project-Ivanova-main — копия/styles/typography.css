@@ -13,9 +13,9 @@
 }
 .button--login{
 
-   color: white;
+   color: #FFFFFF;
 
     border: none;
-    background-color: black;
+    border-radius: 8px;
+    background-color:#0F2336;
 }
-    
