@@ -1,0 +1,268 @@
+/* Основные стили для main и promo */
+.main {
+    margin: 20px auto;
+    max-width: 1200px;
+    /* padding: 0 20px; */
+}
+
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Контент внутри promo */
+.promo__content {
+    max-width: 50%;
+}
+
+.promo__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 20px;
+}
+
+.promo__description {
+    font-size: 1.25rem;
+    color: #576D81;
+    margin-bottom: 20px;
+}
+
+.promo__button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #0f2336;
+    background-color: #00cccc;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.promo__button:hover {
+    background-color: #00cccc;
+}
+
+/* Изображение */
+.promo__image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .promo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promo__content {
+        max-width: 100%;
+    }
+
+    .promo__image {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/* Основные стили для секции "Почему стоит выбрать нас?" */
+.section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.section__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 20px;
+}
+
+.section__description {
+    font-size: 1.25rem;
+    color: #576D81;
+    margin-bottom: 30px;
+}
+
+/* Список карточек */
+.card__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card__item {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0F2336 (0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px #0F2336 (0, 0, 0, 0.15);
+}
+
+.card__icon {
+    display: block;
+    margin-bottom: 15px;
+    width: 24px;
+    height: auto;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+
+.card__description {
+    font-size: 12px;
+    color: #576D81;
+    line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .card__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card__item {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Основные стили для секции индивидуальных занятий */
+.section__private-lessons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0F2336(0, 0, 0, 0.1);
+}
+
+/* Изображение */
+.private-lessons__image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Контейнер с текстом */
+.private-lessons__photo {
+    max-width: 45%;
+    padding: 20px;
+}
+
+.private-lessons__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 20px;
+    line-height: 32px;
+}
+
+.private-lessons__description {
+    font-size: 16px;
+    color: #576D81;
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .section__private-lessons {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .private-lessons__image {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .private-lessons__photo {
+        max-width: 100%;
+    }
+
+    .private-lessons__title {
+        font-size: 1.75rem;
+    }
+
+    .private-lessons__description {
+        font-size: 1rem;
+    }
+}
+/* Основные стили для секции стоимости занятий */
+.section__cost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0F2336 (0, 0, 0, 0.1);
+}
+
+/* Изображение отзывов */
+.reviews__image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Контейнер с информацией о стоимости */
+.cost__photo {
+    max-width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.cost__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 20px;
+}
+
+.cost__description {
+    font-size: 1.25rem;
+    color: #576D81;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cost__image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}

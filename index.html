@@ -6,29 +6,30 @@
     <title>Репетитор по обществознанию</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+     <link rel="stylesheet" href="styles/typography.css">
 </head>
 <body>
     <header class="header container">
-        <a class="header__logo logo" href="#">Repetitor DI</a>
+        <a class="header__logo logo" href="index.html">Repetitor DI</a>
         <nav class="header__nav">
          <ul class="header__list">
-               <li class="header__item"><a class="header__item-link" href="#">О нас/Контакты</a></li>
-               <li class="header__item"><a class="header__item-link" href="#">Услуги</a></li>
+               <li class="header__item"><a class="header__item-link" href="index.html">О нас/Контакты</a></li>
+               <li class="header__item"><a class="header__item-link" href="index.html">Услуги</a></li>
          </ul>
         </nav>
         <a class="header__phone" href="#">
             <img class="header__img" src="images/phone-handset_icon-icons.png" alt="Иконка телефона">
             <span>8-950-313-38-30</span>
         </a>
-        <button class="header__button button--login" type="button">Войти</button>
-        <button class="header__button button--login" type="button">Регистрация</button>
+        <button class="header__button button--login" type="button" id="login-btn">Войти</button>
+        <button class="header__button button--register" type="button" id="register-btn">Регистрация</button>
     </header>
     <main class="main container">
        <section class="promo">
         <div class="promo__content">
             <h1 class="promo__title section__title">Репетитор по обществознанию</h1>
             <p class="promo__description">Учись на отлично! Начни прокачивать свои знания уже сегодня!</p> 
-            <button class="promo__button button" name="button">Записаться на пробный урок</button>
+            <button class="promo__button button" type="button" id="login-btn">Записаться на пробный урок</button>
         </div>
             <img class="promo__image" src="images/relaxed_educator.png" alt="Репетитор заставка" width="594" height="420">
     </section>
@@ -68,6 +69,7 @@
     <section class="section__reviews">
         <div class="reviews__card" >
             <h2 class="reviews__title section__title">Отзывы о занятиях</h2>
+            <img class="reviews__image" src="images/reviews.jpg" alt="отзывы" width="594" height="420">
             <ul class="card__list">
                 <li class="card__item">
                    <h3 class="card__title">Отзыв Виктории Сорокиной</h3>
@@ -87,7 +89,7 @@
                 </li>
             </ul>
         </div>
-        <img class="reviews__image" src="images/reviews.jpg" alt="отзывы" width="594" height="420">
+       
     </section>
     <section class="section__cost">
         <div class="cost__photo" >
@@ -97,71 +99,120 @@
              <img class="cost__image" src="images/cost.png" alt="стоимость занятий" width="594" height="420">
         </div>
     </section>
-
-<!-- Форма "Заявка" -->
     </main>
+    
+<!-- Форма "Войти" -->
+<!-- Модальное окно -->
+<div class="login-popup" id="login-popup">
+  <div class="popup-content">
+    <button class="close-btn" id="close-btn">×</button>
+    <h2 class="info-modal"><span>Войти</span></h2>
+    <form>
+      <input type="text" placeholder="Логин" class="input-field" />
+      <input type="password" placeholder="Пароль" class="input-field" />
+      <div class="buttons">
+       <button type="submit" class="btn-login">Войти</button>
+      <button type="button" class="btn-cancel" id="cancel-btn">Отмена</button>
+      </div>
+     
+    </form>
+    <p class="no-account">У меня еще нет аккаунта</p>
+  </div>
+</div>
+<!--/ Форма "Войти" -->
+
+<!-- Модальное окно для регистрации -->
+<div class="register-popup" id="register-popup">
+  <div class="popup-content">
+    <button class="close-btn-reg" id="close-btn-reg">×</button>
+    <h2 class="info-modal"><span>Регистрация</span></h2>
+    <form>
+      <input type="text" placeholder="Имя" class="input-field" />
+      <input type="text" placeholder="Логин" class="input-field" />
+      <div class="password-block">
+        <input type="password" placeholder="Пароль" class="input-field" />
+        <input type="password" placeholder="Повторите пароль" class="input-field" />
+      </div>
+      <div class="buttons">
+      <button type="submit" class="btn-register">Зарегистрироваться</button>
+      <button type="button" class="btn-cancel" id="cancel-register-btn">Отмена</button>
+      </div>
+    </form>
+    <p class="already-account">У меня уже есть аккаунт</p>
+  </div>
+</div>
+
 <!-- Подвал -->
 <footer class="footer container">
     <a class="footer__logo logo">Repetitor DI</a>
-    <p class="footer__copy">Контактная информация: Иванова Д.Ш.</p>
+    <p class="footer__copy"><span>Контактная информация: Иванова Д.Ш.</span></p>
     <p class="footer__copy">Email: disha0104@mail.ru</p>
     <span class="footer__copy">8-950-313-38-30</span>
 </footer>
-<!--/ Подвал -->
-<!-- Формы -->
- <!-- Форма "Заявка" -->
- <section class="application">
-    <button class="application__close" type="button"><img src="images/icon/close.svg" alt="Закрыть окно" width="24" height="24"></button>
-    <h2 class="application__title">Записаться на пробный урок</h2>
-    <form class="application__form form" action="/" method="post">
-        <input class="form__field" type="text" name="name" placeholder="Имя" required>
-        <input class="form__field" type="email" name="email" placeholder="Email" required>
-        <input class="form__field" type="number" name="number" placeholder="Номер телефона" required>
-        <fieldset class="form__fieldset">
-            <button class="button" type="button">Связаться с нами</button> 
-            <button class="button" type="button">Отмена</button>
-        </fieldset>
-    </form>
-</section>
-<div>
-<!-- Форма "Регистрация" -->
-<section class="popup">
-    <button class="popup__close" type="button"><img src="images/icon/close.svg" alt="Закрыть окно" width="24" height="24"></button>
-    <h2 class="popup__title">Регистрация</h2>
-    <form class="popup__form form" action="/" method="post">
-        <input class="form__field" type="text" name="name" placeholder="Имя" required>
-        <input class="form__field" type="email" name="email" placeholder="Логин" required>
-        <fieldset class="form__fieldset">
-            <div class="form__field-block">
-                <input class="form__field" type="password" name="password" placeholder="Пароль" required>
-                <span>Минимум 8 символов</span>
-            </div>
-            <input  class="form__field" type="password" name="repeat-password" placeholder="Повторите пароль" required>
-        </fieldset>
-        <fieldset class="form__buttons">
-            <input class="button button--accent" type="submit" value="Зарегистрироваться">
-            <button class="button" type="button">Отмена</button>
-        </fieldset>
-        <button class="button button--link" type="button">У меня уже есть аккаунт</button>
-    </form>
-</section>
-<!--/ Форма "Регистрация" -->
-<!-- Форма "Войти" -->
-<section class="section popup">
-    <button class="popup__close" type="button"><img src="images/icon/close.svg" alt="Закрыть окно" width="24" height="24"></button>
-    <h2 class="popup__title">Войти</h2>
-    <form class="popup__form form" action="/" method="post">
-        <input class="form__field" type="email" name="email" placeholder="Логин" required>
-        <input class="form__field" type="password" name="password" placeholder="Пароль" required>
-        <fieldset class="form__buttons">
-            <input class="button button--accent" type="submit" value="Войти">
-            <button class="button" type="button">Отмена</button>
-        </fieldset>
-        <button class="button button--link" type="button">У меня еще нет аккаунта</button>
-    </form>
-</section>
-<!--/ Форма "Войти" -->
-</div>
-<!--/ Формы -->
+
+
+<script>
+// Получаем элементы
+const loginBtn = document.getElementById('login-btn');
+const loginPopup = document.getElementById('login-popup');
+const cancelBtn = document.getElementById('cancel-btn');
+const closeBtn = document.getElementById('close-btn');
+
+// Открытие модального окна при нажатии на кнопку
+loginBtn.addEventListener('click', () => {
+  loginPopup.classList.add('show'); // Добавляем класс для отображения
+});
+
+// Закрытие модального окна при нажатии на кнопку "Отмена"
+cancelBtn.addEventListener('click', () => {
+  loginPopup.classList.remove('show'); // Убираем класс для скрытия
+});
+
+// Закрытие модального окна при клике вне формы (по области вокруг окна)
+window.addEventListener('click', (e) => {
+  if (e.target === loginPopup) {
+    loginPopup.classList.remove('show'); // Убираем класс для скрытия
+  }
+});
+
+// Закрытие модального окна при нажатии на кнопку "×"
+closeBtn.addEventListener('click', () => {
+  loginPopup.classList.remove('show'); // Убираем класс для скрытия
+});
+
+</script>
+
+<script>
+// Получаем элементы для регистрации
+const registerBtn = document.getElementById('register-btn');
+const registerPopup = document.getElementById('register-popup');
+const cancelRegisterBtn = document.getElementById('cancel-register-btn');
+const closeBtnRg = document.getElementById('close-btn-reg');
+
+// Открытие модального окна для регистрации при нажатии на кнопку
+registerBtn.addEventListener('click', () => {
+  registerPopup.classList.add('show'); // Добавляем класс для отображения
+});
+
+// Закрытие модального окна для регистрации при нажатии на кнопку "Отмена"
+cancelRegisterBtn.addEventListener('click', () => {
+  registerPopup.classList.remove('show'); // Убираем класс для скрытия
+});
+
+// Закрытие модального окна при клике вне формы (по области вокруг окна)
+window.addEventListener('click', (e) => {
+  if (e.target === registerPopup) {
+    registerPopup.classList.remove('show'); // Убираем класс для скрытия
+  }
+});
+
+
+// Закрытие модального окна при нажатии на кнопку "×"
+closeBtnRg.addEventListener('click', () => {
+  registerPopup.classList.remove('show'); // Убираем класс для скрытия
+});
+
+</script>
+
 </body>
 </html>

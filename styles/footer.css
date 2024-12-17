@@ -1,0 +1,56 @@
+/* Основные стили для футера */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0f2336;
+    color: #FFFFFF;
+    text-align: center;
+    border-top: 4px solid #0f2336;
+}
+
+/* Логотип */
+.footer__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+/* Текстовая информация */
+.footer__copy {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #FFFFFFB2;
+}
+
+.footer__copy span {
+    color: #00cccc;
+}
+.footer__copy a {
+    color: #0f2336;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__copy a:hover {
+    color: #00cccc;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+    }
+
+    .footer__logo {
+        font-size: 1.25rem;
+    }
+
+    .footer__copy {
+        font-size: 0.9rem;
+    }
+}

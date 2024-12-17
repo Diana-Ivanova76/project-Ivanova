@@ -1,12 +1,731 @@
 /* Подключение шрифтов */
-@import "fonts.css";
+@import 'fonts.css';
 /* Подключение основных стилей */
-@import "base.css";
+@import 'base.css';
 /* Подключение стилей относящихся к header */
-@import "header.css";
+@import 'header.css';
 /* Подключение стилей относящихся к footer */
-@import "footer.css";
+@import 'footer.css';
 /* Подключение стилей относящихся к main */
-@import "main.css";
+@import 'main.css';
 
-@import "typography.css";
+@import 'typography.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+/* Общие стили для header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Логотип */
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #122F53;
+}
+
+.header__logo:hover {
+    color: #00cccc;
+}
+/* Навигация */
+.header__nav {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.header__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__item {
+    margin-right: 15px;
+}
+
+.header__item:last-child {
+    margin-right: 0;
+}
+
+.header__item-link {
+    text-decoration: none;
+    color: #0F2336;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.header__item-link:hover {
+    color: #00cccc;
+}
+
+/* Телефон */
+.header__phone {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0F2336;
+}
+
+.header__img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.header__phone span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Кнопки */
+.header__button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header__button.button--login {
+    background-color: #0f2336;
+    color: #fff;
+}
+
+.header__button.button--login:hover {
+    background-color: #00cccc;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .header {
+        display: grid;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .header__nav {
+        order: 2;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .header__list {
+        justify-content: flex-start;
+    }
+
+    .header__phone {
+        margin-top: 10px;
+    }
+}
+
+/* Основные стили для main и promo */
+.main {
+    margin: 20px auto;
+    max-width: 1200px;
+    /* padding: 0 20px; */
+}
+
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Контент внутри promo */
+.promo__content {
+    max-width: 50%;
+}
+
+.promo__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 20px;
+}
+
+.promo__description {
+    font-size: 1.25rem;
+    color: #576D81;
+    margin-bottom: 20px;
+}
+
+.promo__button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #0f2336;
+    background-color: #00cccc;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.promo__button:hover {
+    background-color: #00cccc;
+}
+
+/* Изображение */
+.promo__image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .promo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promo__content {
+        max-width: 100%;
+    }
+
+    .promo__image {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/* Основные стили для секции "Почему стоит выбрать нас?" */
+.section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.section__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 20px;
+}
+
+.section__description {
+    font-size: 1.25rem;
+    color: #576D81;
+    margin-bottom: 30px;
+}
+
+/* Список карточек */
+.card__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card__item {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0F2336 (0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px #0F2336 (0, 0, 0, 0.15);
+}
+
+.card__icon {
+    display: block;
+    margin-bottom: 15px;
+    width: 24px;
+    height: auto;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+
+.card__description {
+    font-size: 12px;
+    color: #576D81;
+    line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .card__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card__item {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Основные стили для секции индивидуальных занятий */
+.section__private-lessons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0F2336(0, 0, 0, 0.1);
+}
+
+/* Изображение */
+.private-lessons__image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Контейнер с текстом */
+.private-lessons__photo {
+    max-width: 45%;
+    padding: 20px;
+}
+
+.private-lessons__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 20px;
+    line-height: 32px;
+}
+
+.private-lessons__description {
+    font-size: 16px;
+    color: #576D81;
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .section__private-lessons {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .private-lessons__image {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .private-lessons__photo {
+        max-width: 100%;
+    }
+
+    .private-lessons__title {
+        font-size: 1.75rem;
+    }
+
+    .private-lessons__description {
+        font-size: 1rem;
+    }
+}
+
+/* Основные стили для футера */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0f2336;
+    color: #FFFFFF;
+    text-align: center;
+    border-top: 4px solid #0f2336;
+}
+
+/* Логотип */
+.footer__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+/* Текстовая информация */
+.footer__copy {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #FFFFFFB2;
+}
+
+.footer__copy span {
+    color: #00cccc;
+}
+.footer__copy a {
+    color: #0f2336;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__copy a:hover {
+    color: #00cccc;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+    }
+
+    .footer__logo {
+        font-size: 1.25rem;
+    }
+
+    .footer__copy {
+        font-size: 0.9rem;
+    }
+}
+
+/* Основные стили для секции стоимости занятий */
+.section__cost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0F2336 (0, 0, 0, 0.1);
+}
+
+/* Изображение отзывов */
+.reviews__image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Контейнер с информацией о стоимости */
+.cost__photo {
+    max-width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.cost__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 20px;
+}
+
+.cost__description {
+    font-size: 1.25rem;
+    color: #576D81;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cost__image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Кнопка */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0f2336;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .section__cost {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .reviews__image {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .cost__photo {
+        max-width: 100%;
+    }
+
+    .cost__title {
+        font-size: 1.75rem;
+    }
+
+    .cost__description {
+        font-size: 1rem;
+    }
+
+    .cost__image {
+        max-width: 80%;
+    }
+}
+
+/* Кнопка регистрации в шапке */
+.header__button {
+    padding: 10px 20px;
+    background-color: #0f2336;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.header__button:hover {
+    background-color: #00cccc;
+}
+
+.conteiner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #0f2336;
+    border: 1px solid #00cccc;
+    border-radius: 14px;
+    background-color: #00cccc;
+}
+.button--login {
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    background-color: #0F2336;
+}
+
+/* Стиль скрытого модального окна с прозрачностью */
+.login-popup {
+    display: none; /* Начальное состояние - скрыто */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Начальная прозрачность */
+    transition: opacity 0.3s ease; /* Плавный переход для изменения прозрачности */
+}
+
+/* Когда окно будет отображаться */
+.login-popup.show {
+    display: flex;
+    opacity: 1; /* Сделать видимым */
+}
+
+.popup-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; 
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h2 span {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+form {
+    font-family: 'Montserrat', sans-serif;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #9196a166;
+    border-radius: 16px;
+    font-size: 16px;
+    height: 50px;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #00cccc;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 60px;
+}
+
+.btn-login:hover {
+    background-color: #00cccc;
+}
+
+.btn-cancel {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid #00cccc;
+    color: #00cccc;
+    font-size: 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 60px;
+}
+
+.btn-cancel:hover {
+    background-color: #00cccc;
+    color: #fff;
+}
+
+.no-account {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #00cccc;
+    cursor: pointer;
+    border-bottom: 1px dashed #00cccc;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+/* Стиль скрытого модального окна для регистрации с прозрачностью */
+.register-popup {
+    display: none; /* Начальное состояние - скрыто */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Начальная прозрачность */
+    transition: opacity 0.3s ease; /* Плавный переход для изменения прозрачности */
+}
+
+/* Когда окно будет отображаться */
+.register-popup.show {
+    display: flex;
+    opacity: 1; /* Сделать видимым */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    background-color: #00cccc;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 60px;
+}
+
+.btn-register:hover {
+    background-color: #00cccc;
+}
+
+.already-account {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #00cccc;
+    cursor: pointer;
+    border-bottom: 1px dashed #00cccc;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    gap: 22px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.password-block {
+    display: flex;
+    gap: 22px;
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        display: grid;
+        gap: 10px;
+    }
+
+    .password-block {
+        display: grid;
+        gap: 10px;
+    }
+
+    .popup-content {
+        background: #fff;
+        padding: 15px;
+        border-radius: 24px;
+        width: 100%;
+        max-width: 420px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+}
+
+.info-modal {
+    text-align: left;
+}
