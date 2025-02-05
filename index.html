@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Репетитор по обществознанию</title>
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/button.css">
+    <link rel="stylesheet" href="styles/headlines.css">
+    <link rel="stylesheet" href="styles/promo.css">
+    <link rel="stylesheet" href="styles/card.css">
+    <link rel="stylesheet" href="styles/section.css">
+    <link rel="stylesheet" href="styles/price.css">
     <link rel="stylesheet" href="styles/style.css">
-     <link rel="stylesheet" href="styles/typography.css">
 </head>
 <body>
     <header class="header container">
@@ -24,7 +32,10 @@
         <button class="header__button button--login" type="button" id="login-btn">Войти</button>
         <button class="header__button button--register" type="button" id="register-btn">Регистрация</button>
     </header>
+
+
     <main class="main container">
+        <!-- cтили в promo.css -->
        <section class="promo">
         <div class="promo__content">
             <h1 class="promo__title section__title">Репетитор по обществознанию</h1>
@@ -32,7 +43,10 @@
             <button class="promo__button button" type="button" id="login-btn">Записаться на пробный урок</button>
         </div>
             <img class="promo__image" src="images/relaxed_educator.png" alt="Репетитор заставка" width="594" height="420">
-    </section>
+        </section>
+        <!-- cтили в promo.css -->
+
+        <!-- cтили в card.css -->
         <section class="section card">
             <h2 class="section__title">Почему стоит выбрать нас?</h2>
             <p class="section__description">Repetitor DI это:</p>
@@ -59,6 +73,9 @@
                 </li>
             </ul>
         </section>
+        <!-- cтили в card.css -->
+
+        <!-- cтили section.css -->
     <section class="section__private-lessons">
     <img class="private-lessons__image" src="images/individual-lessons.png" alt="Индивидуальные занятия" width="594" height="420">
         <div class="private-lessons__photo">
@@ -66,7 +83,10 @@
         <p class="private-lessons__description">Занятия в мини-группах с топовыми репетиторами на 73% эффективнее. Вебинары не работают. Тебе кажется, что ты вот-вот посмотришь очередное занятие, но по факту лишь откладываешь его «на завтра». Итог: количество непросмотренных вебинаров копится в геометрической прогрессии, а вы испытываете постояннное чувстсво вины за то, что так и не приступил к подготовке.</p> 
         </div>
     </section>
+        <!-- cтили section.css -->
+
     <section class="section__reviews">
+        <!-- cтили в card.css -->
         <div class="reviews__card" >
             <h2 class="reviews__title section__title">Отзывы о занятиях</h2>
             <img class="reviews__image" src="images/reviews.jpg" alt="отзывы" width="594" height="420">
@@ -89,8 +109,10 @@
                 </li>
             </ul>
         </div>
-       
+        <!-- cтили в card.css -->
     </section>
+
+        <!-- cтили в price.css -->
     <section class="section__cost">
         <div class="cost__photo" >
              <h2 class="cost__title section__title">Сколько стоят занятия? </h2>
@@ -99,6 +121,7 @@
              <img class="cost__image" src="images/cost.png" alt="стоимость занятий" width="594" height="420">
         </div>
     </section>
+        <!-- cтили в price.css -->
     </main>
     
 <!-- Форма "Войти" -->

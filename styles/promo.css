@@ -1,0 +1,44 @@
+
+/* Основные стили для promo */
+
+
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Контент внутри promo */
+.promo__content {
+    max-width: 50%;
+}
+
+/* Изображение */
+.promo__image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .promo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promo__content {
+        max-width: 100%;
+    }
+
+    .promo__image {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
