@@ -1,0 +1,58 @@
+
+/* Основные стили для секции "Почему стоит выбрать нас?" */
+.section {
+    padding: 40px 0;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Список карточек */
+.card__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    list-style: none;
+    padding: 20px 0 0 0;
+    margin: 0;
+}
+
+.card__item {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #dfdfdf;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px #0F2336; (0, 0, 0, 0.15);
+}
+
+.card__icon {
+    display: block;
+    margin-bottom: 15px;
+    width: 24px;
+    height: auto;
+}
+
+.reviews__card {
+    padding: 40px 0px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .card__list {
+        align-items: center;
+    }
+
+    .card__item {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}

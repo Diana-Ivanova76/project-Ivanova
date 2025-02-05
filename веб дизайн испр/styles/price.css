@@ -1,0 +1,57 @@
+/* Основные стили для секции стоимости занятий */
+.section__cost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0f233617; (0, 0, 0, 0.1);
+}
+
+/* Изображение отзывов */
+.reviews__image {
+    max-width: 45%;
+    margin: 0 auto;
+}
+
+/* Контейнер с информацией о стоимости */
+.cost__photo {
+    max-width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.cost__image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .section__cost {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .reviews__image {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .cost__photo {
+        max-width: 100%;
+    }
+
+    .cost__description {
+        font-size: 1rem;
+    }
+
+    .cost__image {
+        max-width: 80%;
+    }
+}
