@@ -1,0 +1,14 @@
+.reviews__card {
+    padding: 40px 0px;
+}
+
+/* Изображение отзывов */
+.reviews__image {
+    max-width: 45%;
+    margin: 0 auto;
+}
+
+.reviews__list{
+    list-style-type: none;
+    text-align: left;
+}

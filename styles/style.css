@@ -1,0 +1,116 @@
+/* Подключение шрифтов */
+@import "fonts.css";
+/* Подключение основных стилей */
+@import "base.css";
+/*Подключение универсальных стилей */
+@import "typography.css";
+/* Подключение стилей относящихся к header */
+@import "header.css";
+/* Подключение стилей относящихся к footer */
+@import "footer.css";
+/* Подключение стилей относящихся к main */
+@import "main.css";
+@import "section.css";
+@import "promo.css";
+@import "card.css";
+@import "price.css";
+@import "private-lessons.css";
+@import "reviews.css";
+@import "cost.css";
+@import "button.css";
+
+
+
+/* Стиль скрытого модального окна с прозрачностью */
+.login-popup {
+    display: none; /* Начальное состояние - скрыто */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Начальная прозрачность */
+    transition: opacity 0.3s ease; /* Плавный переход для изменения прозрачности */
+}
+
+/* Когда окно будет отображаться */
+.login-popup.show {
+    display: flex;
+    opacity: 1; /* Сделать видимым */
+}
+
+.popup-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; 
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #9196a166;
+    border-radius: 16px;
+    font-size: 16px;
+    height: 50px;
+}
+
+.no-account {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #00cccc;
+    cursor: pointer;
+    border-bottom: 1px dashed #00cccc;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+/* Стиль скрытого модального окна для регистрации с прозрачностью */
+.register-popup {
+    display: none; /* Начальное состояние - скрыто */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Начальная прозрачность */
+    transition: opacity 0.3s ease; /* Плавный переход для изменения прозрачности */
+}
+
+/* Когда окно будет отображаться */
+.register-popup.show {
+    display: flex;
+    opacity: 1; /* Сделать видимым */
+}
+
+.already-account {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #00cccc;
+    cursor: pointer;
+    border-bottom: 1px dashed #00cccc;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+.password-block {
+    display: flex;
+    gap: 22px;
+}
+
+
+
+.info-modal {
+    text-align: left;
+}

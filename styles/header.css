@@ -1,0 +1,108 @@
+
+/* Общие стили для header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Логотип */
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #122F53;
+}
+
+.header__logo:hover {
+    color: #00cccc;
+}
+
+/* Навигация */
+.header__nav {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.header__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__item {
+    margin-right: 15px;
+}
+
+.header__item:last-child {
+    margin-right: 0;
+}
+
+.header__item-link {
+    text-decoration: none;
+    color: #0F2336;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.header__item-link:hover {
+    color: #00cccc;
+}
+
+/* Телефон */
+.header__phone {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0F2336;
+}
+
+.header__img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.header__phone span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Кнопка регистрации в шапке */
+.header__button {
+    padding: 10px 20px;
+    background-color: #0f2336;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.header__button:hover {
+    background-color: #00cccc;
+}
+
+/* Кнопки */
+.header__button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header__button.button--login {
+    background-color: #0f2336;
+    color: #fff;
+}
+
+.header__button.button--login:hover {
+    background-color: #00cccc;
+}
+
