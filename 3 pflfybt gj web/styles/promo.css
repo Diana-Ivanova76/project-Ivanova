@@ -1,0 +1,50 @@
+
+/* Основные стили для promo */
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.promo__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F2336;
+    margin-bottom: 20px;
+}
+
+.promo__description {
+    font-size: 1.25rem;
+    color: #576D81;
+    margin-bottom: 20px;
+}
+
+
+/* Контент внутри promo */
+.promo__content {
+    max-width: 50%;
+}
+
+/* Изображение */
+.promo__image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+}
+.promo__button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #0f2336;
+    background-color: #00cccc;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.promo__button:hover {
+    background-color: #00cccc;
+}
