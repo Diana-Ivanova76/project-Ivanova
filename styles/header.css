@@ -1,6 +1,9 @@
 
 /* Общие стили для header */
 .header {
+    position: fixed;
+    width: 1200px;
+    left: 58px;
     display: flex;
     justify-content: space-between;
     align-items: center;
