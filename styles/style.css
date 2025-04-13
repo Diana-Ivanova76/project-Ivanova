@@ -19,6 +19,7 @@
 @import "cost.css";
 @import "button.css";
 @import "adaptibility.css";
+@import "treners.css"; 
 
 
 /* Стиль скрытого модального окна с прозрачностью */
@@ -109,8 +110,7 @@
     gap: 22px;
 }
 
-
-
 .info-modal {
     text-align: left;
 }
+ 

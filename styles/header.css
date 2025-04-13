@@ -2,13 +2,13 @@
 /* Общие стили для header */
 .header {
     position: fixed;
-    width: 1200px;
-    left: 58px;
+    width: 100%;
+    left: 190px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    background-color: #f8f9fa;
+    background-color: #fff;
     border-bottom: 1px solid #ddd;
 }
 
@@ -109,3 +109,6 @@
     background-color: #00cccc;
 }
 
+.header--background {
+    background-color:#f8f9fa;
+}
