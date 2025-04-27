@@ -20,11 +20,10 @@
 @import "button.css";
 @import "adaptibility.css";
 @import "treners.css"; 
-
+@import "applications.css";
 
 /* Стиль скрытого модального окна с прозрачностью */
 .login-popup {
-    display: none; /* Начальное состояние - скрыто */
     position: fixed;
     top: 0;
     left: 0;
@@ -33,17 +32,19 @@
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
-    opacity: 0; /* Начальная прозрачность */
     transition: opacity 0.3s ease; /* Плавный переход для изменения прозрачности */
 }
 
-/* Когда окно будет отображаться */
+/* Когда окно будет отображаться
 .login-popup.show {
     display: flex;
     opacity: 1; /* Сделать видимым */
-}
+
 
 .popup-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: #fff;
     padding: 40px;
     border-radius: 24px;
@@ -74,43 +75,45 @@
     margin: 0 auto;
 }
 
-/* Стиль скрытого модального окна для регистрации с прозрачностью */
-.register-popup {
-    display: none; /* Начальное состояние - скрыто */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0; /* Начальная прозрачность */
-    transition: opacity 0.3s ease; /* Плавный переход для изменения прозрачности */
+/* Скрываем контент до загрузки */
+.content {
+    display: none;
+    }
+    .preloader {
+    padding-top: 5%; /* Отступ сверху */
+    background: #fefefb; /* задаем фон при загрузке */
+    transition: opacity 0.5s ease; /* Плавный переход для изменения
+    прозрачности */
+    text-align: center;/* центрируем текст */
+    }
+    .loader span {
+    display: inline-block;/* располагаем элементы в строку */
+    width: 20px;/* Ширина кругов */
+    height: 20px;/* Высота кругов */
+    border-radius: 100%;/* задаем круг */
+    background-color:  #fefefb;/* Цвет кругов */
+    margin: 35px5px;/* Отступы вокруг кругов */
+    }
+    .dot1 {
+    animation: bounce 1s ease-in-out infinite;/* анимация для первой точки
+    */
+    }
+    .dot2{
+    animation: bounce 1s ease-in-out 0.33s infinite;/*анимация для второй
+    точки с задержкой*/
+    }
+    .dot3 {
+    animation: bounce 1s ease-in-out 0.66s infinite;/* анимация для
+    третьей точки с задержкой */
+    }
+    /* Анимация bounce: */
+    @keyframes bounce {
+    0%,
+    20%,
+    50% {
+    transform: translateY(0);/* круги на месте */
 }
-
-/* Когда окно будет отображаться */
-.register-popup.show {
-    display: flex;
-    opacity: 1; /* Сделать видимым */
+    10% {
+        transform: translateY(-30px);/* круги поднимаются */
 }
-
-.already-account {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #00cccc;
-    cursor: pointer;
-    border-bottom: 1px dashed #00cccc;
-    max-width: max-content;
-    margin: 0 auto;
 }
-
-.password-block {
-    display: flex;
-    gap: 22px;
-}
-
-.info-modal {
-    text-align: left;
-}
- 

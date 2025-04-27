@@ -31,15 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
          * 
          * Блок-схема:images/сhema.png
          */
-
+//скролл страницы 
         const heightHeader = header.offsetHeight;
-
         document.addEventListener('scroll', () => {
-
             console.log('Страница скролится');
-
             let scrollPageY = this.scrollY;
-
             if (scrollPageY > heightHeader) {
                 header.classList.add('header--background')
             } else {
@@ -87,85 +83,132 @@ function updateSlider() {
         }
     });
 }
+//3.4.1.	Формируем массив из частей определенных элементов блока 
+const cardsContainer = document.querySelector (".card"); 
+if (cardsContainer) {
+    const dataTitleList = [
+        "Индивидуальные занятия",
+        "Профессиональные преподаватели",
+        "Удобство дистанционного обучения",
+        "Доступная цена",
+    ];
+    const titleList= cardsContainer.querySelectorAll(".card__title");
+    titleList.forEach((item, index) => {
+        item.textContent = dataTitleList[index];
+    });
+}
 
-// ЛОГИН
+    /* 4. Появление модального окна*/ 
+const headerLoginButton = document.querySelector(".login-button"); 
+const loginStyle = document.querySelector(".login-popup");
+if (headerLoginButton && loginStyle) {
+    headerLoginButton.addEventListener("click", () => {
+    loginStyle.removeAttribute("hidden"); 
+    });
 
-// Находим кнопку "Войти"
-const loginButton1 = document.getElementById('login-btn');
+}
+// Закрытие модального окна при клике вне его области 
+window.addEventListener("click", (event) => {
+    if (event.target === loginStyle) {
+     loginStyle.setAttribute("hidden", true);
+    }
+});
+// Закрытие модального окна при клике на кнопку закрытия 
+const closeLoginButton = document.querySelector(".close-btn");
+closeLoginButton.addEventListener("click", () => {
+loginStyle.setAttribute("hidden", true);
+});
 
-// Находим всплывающее окно входа
-const loginWindow = document.getElementById('login-popup');
+const headerRegisterationButton = document.querySelector(".registeration-button"); 
+const registerStyle= document.querySelector(".register-popup");
+if (headerRegisterationButton && registerStyle) {
+    headerRegisterationButton.addEventListener("click", () => {
+    registerStyle.removeAttribute("hidden"); 
+    });
 
-// Кнопка "Отмена" в окне входа
-const loginCancelButton = document.getElementById('cancel-btn');
+}
+// Закрытие модального окна при клике вне его области 
+window.addEventListener("click", (event) => {
+    if (event.target === registerStyle) {
+    registerStyle.setAttribute("hidden", true);
+    }
+});
+// Закрытие модального окна при клике на кнопку закрытия 
+const closeRegisterationButton = document.querySelector(".close-btn-reg");
+closeRegisterationButton.addEventListener("click", () => {
+registerStyle.setAttribute("hidden", true);
+});
 
-// Кнопка "Закрыть" (крестик) в окне входа
-const loginCloseButton = document.getElementById('close-btn');
+//3.5.1.
+const CardsContainer = document.querySelector (".card"); 
+if (CardsContainer) {
+    const cardList= cardsContainer.querySelectorAll(".card__list");
+    const cardsContainerData = {
+        card1: {
+            description: 'Проводятся с использованием специально разработанных программ обучения, гибкий график занятий.',
+        },
+        card2: {
+            description: 'Квалифицированные специалисты, преподаватели проходят тщательный отбор и постоянные проверки квалификации.',
+        },
+        card3: {
+            description: 'В любое удобное время, занимайтесь в комфортной обстановке и не тратьте время на дорогу.',
+        },
+        card4: {
+            description: 'Подберите для себя удобный тарифный план и способ оплаты.',
+        }
+    }
+    const createCard = (description) => {
+        const сard = `
+            <li class="card__item">
+                <p class="card__description">${description}</p>
+            </li>
+    `;
+        return card;
+    }
+    for (const cardKey in cardsContainerData) {
+        const card = cardsContainerData [cardKey];
+        const cardElement = createCard (card.description);
+        cardList.insertAdjacentHTML('beforeend', cardElement);
+    }
+}
 
-// Когда пользователь нажимает кнопку "Войти"
-loginButton1.onclick = function () {
-	// Показываем окно входа, добавляя класс "show"
-	loginWindow.classList.add('show');
-};
+//3.5.2.
+const headerContainer = document.querySelector('.header__ container');
+if (headerContainer){
+    const headerList = headerMenu.querySelector('.header__list');
+    const  ContainerData = {
+        link1: {
+            link: '#',
+            title: 'О нас/Контакты',
+        },
+        link2: {
+            link: '#',
+            title: 'Услуги',
+        }
+    }
+    const createLink = (UrlLink, title) =>{
+        const link = `
+            <li class="header__item"><a href="${UrlLink}"
+class="header__link">${title}</a></li>
+            `;
+            return link;
+        }
+        for (const linkItem in ContainerData) {
+            const link = ContainerData [linkItem];
+            const linkIndex = createLink(link.UrlLink, link.title);
+            headerList.insertAdjacentHTML('beforeend', linkIndex);
+        }
+}
 
-// Когда пользователь нажимает кнопку "Отмена"
-loginCancelButton.onclick = function () {
-	// Скрываем окно входа, убирая класс "show"
-	loginWindow.classList.remove('show');
-};
-
-// Когда пользователь нажимает кнопку "×"
-loginCloseButton.onclick = function () {
-	// Скрываем окно входа, убирая класс "show"
-	loginWindow.classList.remove('show');
-};
-
-// Если пользователь кликает на затемнённый фон вокруг окна входа
-loginWindow.onclick = function (event) {
-	// Проверяем, что клик был именно по фону, а не по форме
-	if (event.target === loginWindow) {
-		// Скрываем окно входа
-		loginWindow.classList.remove('show');
-	}
-};
-
-// РЕГИСТРАЦИЯ
-
-// Находим кнопку "Регистрация"
-const registerButton = document.getElementById('register-btn');
-
-// Находим всплывающее окно регистрации
-const registerWindow = document.getElementById('register-popup');
-
-// Кнопка "Отмена" в окне регистрации
-const registerCancelButton = document.getElementById('cancel-register-btn');
-
-// Кнопка "Закрыть" (крестик) в окне регистрации
-const registerCloseButton = document.getElementById('close-btn-reg');
-
-// Когда пользователь нажимает кнопку "Регистрация"
-registerButton.onclick = function () {
-	// Показываем окно регистрации, добавляя класс "show"
-	registerWindow.classList.add('show');
-};
-
-// Когда пользователь нажимает кнопку "Отмена"
-registerCancelButton.onclick = function () {
-	// Скрываем окно регистрации, убирая класс "show"
-	registerWindow.classList.remove('show');
-};
-
-// Когда пользователь нажимает кнопку "×"
-registerCloseButton.onclick = function () {
-	// Скрываем окно регистрации
-	registerWindow.classList.remove('show');
-};
-
-// Если пользователь кликает на затемнённый фон вокруг окна регистрации
-registerWindow.onclick = function (event) {
-	// Проверяем, что клик был именно по фону, а не по форме
-	if (event.target === registerWindow) {
-		// Скрываем окно регистрации
-		registerWindow.classList.remove('show');
-	}
-};
+//3.6.2.
+const preloader = document.querySelector(".preloader");
+const content = document.querySelector(".content");
+if (preloader && content) {
+    setTimeout(() => {
+        // Скрываем предзагрузчик
+        preloader.style.opacity = "0";
+        preloader.style.visibility = "hidden";
+        content.style.display = "block";
+        preloader.remove();
+}, 3000);
+}
