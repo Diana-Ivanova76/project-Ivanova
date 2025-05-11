@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Репетитор по обществознанию</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -19,62 +20,62 @@
             Загрузка...
         </div>
     </div>
-        <div class="content">
-            <header class="header container">
-                <a class="header__logo logo" href="index.html">Repetitor DI</a>
-                <nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="header__item"><a class="header__item-link" href="index.html">О нас/Контакты</a></li>
-                <li class="header__item"><a class="header__item-link" href="index.html">Услуги</a></li>
-                    </ul>
-                </nav>
-                <a class="header__phone" href="#">
-                    <img class="header__img" src="images/phone-handset_icon-icons.png" alt="Иконка телефона">
-                    <span>8-950-313-38-30</span>
-                </a>
-                <button class="header__button login-button" type="button" id="login-btn">Войти</button>
-                <button class="header__button registeration-button" type="button" id="register-btn">Регистрация</button>
-            </header>
+    <div class="content">
+        <header class="header container">
+            <a class="header__logo logo" href="index.html">Repetitor DI</a>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a class="header__item-link" href="index.html">О нас/Контакты</a></li>
+                    <li class="header__item"><a class="header__item-link" href="index.html">Услуги</a></li>
+                </ul>
+            </nav>
+            <a class="header__phone" href="#">
+                <img class="header__img" src="images/phone-handset_icon-icons.png" alt="Иконка телефона">
+                <span>8-950-313-38-30</span>
+            </a>
+            <button class="header__button login-button" type="button" id="login-btn">Войти</button>
+            <button class="header__button registeration-button" type="button" id="register-btn">Регистрация</button>
+        </header>
 
 
-            <main class="container">
-                <!-- cтили в promo.css -->
-                <section class="section promo">
-                    <div class="promo__content">
-                        <h1 class="promo__title section__title">Репетитор по обществознанию</h1>
-                        <p class="promo__description">Учись на отлично! Начни прокачивать свои знания уже сегодня!</p>
-                        <button class="promo__button button" type="button" id="login-btn">Записаться на пробный
-                            урок</button>
-                    </div>
-                    <img class="promo__image" src="images/relaxed_educator.png" alt="Репетитор заставка" width="594"
-                        height="420">
-                </section>
-                <!-- cтили в promo.css -->
-
-                <div class="applications" hidden>
-                    <section class="application">
-                        <div class="application wrap">
-                            <h3 class="application title">
-                                Запишитесь на курс <br> со скидкой 15%
-                            </h3>
-                            <p class="application＿text">Акция действительна 3 июня 2025 года</p>
-                            <button class="applicationbutton button">Отправить заявку</button>
-                        </div>
-                        <form action="/" class="applicationform">
-                            <input class="application input" type="text" placeholder="Имя">
-                            <input class="application＿input" type="tel" placeholder="Телефон">
-                            <input class="application input" type="email" placeholder="E-mail">
-
-                        </form>
-                    </section>
+        <main class="container">
+            <!-- cтили в promo.css -->
+            <section class="section promo">
+                <div class="promo__content">
+                    <h1 class="promo__title section__title">Репетитор по обществознанию</h1>
+                    <p class="promo__description">Учись на отлично! Начни прокачивать свои знания уже сегодня!</p>
+                    <button class="promo__button button" type="button" id="login-btn">Записаться на пробный
+                        урок</button>
                 </div>
+                <img class="promo__image" src="images/relaxed_educator.png" alt="Репетитор заставка" width="594"
+                    height="420">
+            </section>
+            <!-- cтили в promo.css -->
 
-                <!-- cтили в card.css -->
-                <section class="section card">
-                    <h2 class="section__title">Почему стоит выбрать нас?</h2>
-                    <p class="section__description">Repetitor DI это:</p>
-                    <ul class="card__list">
-                        <!--  <li class="card__item">
+            <div class="applications" hidden>
+                <section class="application">
+                    <div class="application wrap">
+                        <h3 class="application title">
+                            Запишитесь на курс <br> со скидкой 15%
+                        </h3>
+                        <p class="application＿text">Акция действительна 3 июня 2025 года</p>
+                        <button class="applicationbutton button">Отправить заявку</button>
+                    </div>
+                    <form action="/" class="applicationform">
+                        <input class="application input" type="text" placeholder="Имя">
+                        <input class="application＿input" type="tel" placeholder="Телефон">
+                        <input class="application input" type="email" placeholder="E-mail">
+
+                    </form>
+                </section>
+            </div>
+
+            <!-- cтили в card.css -->
+            <section class="section card">
+                <h2 class="section__title">Почему стоит выбрать нас?</h2>
+                <p class="section__description">Repetitor DI это:</p>
+                <ul class="card__list">
+                    <!--  <li class="card__item">
                     <img class="card__icon" src="images/e-learning.png" alt="Иконка для индивидуальных занятий"
                         width="22" height="24">
                     <h3 class="card__title">Заголовок 1</h3>
@@ -101,191 +102,212 @@
                     <h3 class="card__title">Заголовок 4</h3>
                     <p class="card__description">Подберите для себя удобный тарифный план и способ оплаты.</p>
                 </li> -->
-                    </ul>
-                </section>
+                </ul>
+            </section>
+            <!-- cтили в card.css -->
+
+
+
+            <!-- cтили section.css -->
+            <section class="section private-lessons">
+                <img class="private-lessons__image" src="images/individual-lessons.png" alt="Индивидуальные занятия"
+                    width="594" height="420">
+                <div class="private-lessons__photo">
+                    <h2 class="private-lessons__title section__title">Почему индивидуальные занятия, а не вебинары?
+                    </h2>
+                    <p class="private-lessons__description">Занятия в мини-группах с топовыми репетиторами на 73%
+                        эффективнее. Вебинары не работают. Тебе кажется, что ты вот-вот посмотришь очередное
+                        занятие, но по
+                        факту лишь откладываешь его «на завтра». Итог: количество непросмотренных вебинаров копится
+                        в
+                        геометрической прогрессии, а вы испытываете постояннное чувстсво вины за то, что так и не
+                        приступил
+                        к подготовке.</p>
+                </div>
+            </section>
+            <!-- cтили section.css -->
+
+            <section class="section reviews">
                 <!-- cтили в card.css -->
-
-                <!-- cтили section.css -->
-                <section class="section private-lessons">
-                    <img class="private-lessons__image" src="images/individual-lessons.png" alt="Индивидуальные занятия"
-                        width="594" height="420">
-                    <div class="private-lessons__photo">
-                        <h2 class="private-lessons__title section__title">Почему индивидуальные занятия, а не вебинары?
-                        </h2>
-                        <p class="private-lessons__description">Занятия в мини-группах с топовыми репетиторами на 73%
-                            эффективнее. Вебинары не работают. Тебе кажется, что ты вот-вот посмотришь очередное
-                            занятие, но по
-                            факту лишь откладываешь его «на завтра». Итог: количество непросмотренных вебинаров копится
-                            в
-                            геометрической прогрессии, а вы испытываете постояннное чувстсво вины за то, что так и не
-                            приступил
-                            к подготовке.</p>
-                    </div>
-                </section>
-                <!-- cтили section.css -->
-
-                <section class="section reviews">
-                    <!-- cтили в card.css -->
-                    <div class="reviews__card">
-                        <h2 class="reviews__title section__title">Отзывы о занятиях</h2>
-                        <img class="reviews__image" src="images/reviews.jpg" alt="отзывы" width="594" height="420">
-                        <ul class="reviews__list">
-                            <li class="reviews">
-                                <h3 class="reviews__title">Отзыв Виктории Сорокиной</h3>
-                                <p class="reviews__description">Полная отдача, интересные занятия, интерактивы,
-                                    повторения,
-                                    блицы. Я неимоверно рада, что оказалась здесь, потому что объективно сложная и
-                                    объёмная
-                                    информация преподносится легко и структурировано. Репетитор старается максимально
-                                    доходчиво
-                                    объяснить все темы, привнося собственные методики и способы запоминания, и это
-                                    действительно
-                                    эффективно!!!</p>
-                            </li>
-                            <li class="reviews">
-                                <h3 class="reviews__title">Отзыв Полины Софроновой</h3>
-                                <p class="reviews__description">Просто влюбилась в обществознание!Преподаватель
-                                    требовательная,но в то же время очень чуткая. Уроки всегда проходили
-                                    интересно,информация
-                                    легко усваивалась. Всегда на связи,помогала с любыми вопросами! Очень буду скучать
-                                    по этим
-                                    урокам. Рекомендую!</p>
-                            </li>
-                            <li class="reviews">
-                                <h3 class="reviews__title">Отзыв Елизаветы Мусаловой</h3>
-                                <p class="reviews__description">Очень понравилась подача материала, преподаватель всегда
-                                    была на
-                                    связи, отвечала на все вопросы очень развёрнуто. В меру строгая и очень приятный
-                                    человек.
-                                    Знает, кажется, про всё на свете, может привести пример из любой области, так что на
-                                    уроках
-                                    всегда были интересные обсуждения. Хочется сказать огромное спасибо!</p>
-                            </li>
-                            <li class="reviews">
-                                <h3 class="reviews__title">Отзыв Дмитрия Иванова</h3>
-                                <p class="reviews__description">Заниматься с моим преподавателем было легко и приятно,
-                                    на
-                                    занятиях не страшно было ошибиться или чего-то не знать, я всегда понимал, что мне
-                                    помогут,
-                                    поддержат и объяснят. На уроках царила теплая атмосфера, где комфортно, где можно и
-                                    шутить и
-                                    быть серьезными, а главное-продуктивно работать. </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- cтили в card.css -->
-                </section>
-                <!-- cтили в treners.css -->
-                <section class="section--treners" id="trener">
-                    <h2 class="treners__title section__title">Наши преподаватели</h2>
-                    <ul class="treners__card">
-                        <li class="treners__item">
-                            <img src="images/chelovec u ob.png" alt="Тренер Анатолий Сергеевич" class="treners__img">
-                            <h3 class="treners__subtitle">АНАТОЛИЙ СЕРГЕЕВИЧ</h3>
-                            <p class="treners__test">преподаватель по блоку "Человек и общество"</p>
-                            <button class="treners__link" type="button">Подробнее</button>
+                <div class="reviews__card">
+                    <h2 class="reviews__title section__title">Отзывы о занятиях</h2>
+                    <img class="reviews__image" src="images/reviews.jpg" alt="отзывы" width="594" height="420">
+                    <ul class="reviews__list">
+                        <li class="reviews">
+                            <h3 class="reviews__title">Отзыв Виктории Сорокиной</h3>
+                            <p class="reviews__description">Полная отдача, интересные занятия, интерактивы,
+                                повторения,
+                                блицы. Я неимоверно рада, что оказалась здесь, потому что объективно сложная и
+                                объёмная
+                                информация преподносится легко и структурировано. Репетитор старается максимально
+                                доходчиво
+                                объяснить все темы, привнося собственные методики и способы запоминания, и это
+                                действительно
+                                эффективно!!!</p>
                         </li>
-                        <li class="treners__item">
-                            <img src="images/politica.png" alt="Тренер Марина Алексанровна" class="treners__img">
-                            <h3 class="treners__subtitle">МАРИНА АЛЕКСАНДРОВНА </h3>
-                            <p class="treners__test">преподаватель по "Политике"</p>
-                            <button class="treners__link" type="button">Подробнее</button>
+                        <li class="reviews">
+                            <h3 class="reviews__title">Отзыв Полины Софроновой</h3>
+                            <p class="reviews__description">Просто влюбилась в обществознание!Преподаватель
+                                требовательная,но в то же время очень чуткая. Уроки всегда проходили
+                                интересно,информация
+                                легко усваивалась. Всегда на связи,помогала с любыми вопросами! Очень буду скучать
+                                по этим
+                                урокам. Рекомендую!</p>
                         </li>
-                        <li class="treners__item">
-                            <img src="images/repit economica.png" alt="Тренер Полина Андреевна" class="treners__img">
-                            <h3 class="treners__subtitle">ПОЛИНА АНДРЕЕВНА</h3>
-                            <p class="treners__test">преподаватель по "Экономике"</p>
-                            <button class="treners__link">Подробнее</button>
+                        <li class="reviews">
+                            <h3 class="reviews__title">Отзыв Елизаветы Мусаловой</h3>
+                            <p class="reviews__description">Очень понравилась подача материала, преподаватель всегда
+                                была на
+                                связи, отвечала на все вопросы очень развёрнуто. В меру строгая и очень приятный
+                                человек.
+                                Знает, кажется, про всё на свете, может привести пример из любой области, так что на
+                                уроках
+                                всегда были интересные обсуждения. Хочется сказать огромное спасибо!</p>
                         </li>
-                        <li class="treners__item">
-                            <img src="images/sociologia.png" alt="Тренер Сергей Викторович" class="treners__img">
-                            <h3 class="treners__subtitle">СЕРГЕЙ ВИКТОРОВИЧ</h3>
-                            <p class="treners__test">преподаватель по "Социологии"</p>
-                            <button class="treners__link">Подробнее</button>
-                        </li>
-                        <li class="treners__item">
-                            <img src="images/pravo.png" alt="Тренер Дмитрий Алексеевич" class="treners__img">
-                            <h3 class="treners__subtitle">ДМИТРИЙ АЛЕКСЕЕВИЧ</h3>
-                            <p class="treners__test">преподаватель по "Праву"</p>
-                            <button class="treners__link">Подробнее</button>
+                        <li class="reviews">
+                            <h3 class="reviews__title">Отзыв Дмитрия Иванова</h3>
+                            <p class="reviews__description">Заниматься с моим преподавателем было легко и приятно,
+                                на
+                                занятиях не страшно было ошибиться или чего-то не знать, я всегда понимал, что мне
+                                помогут,
+                                поддержат и объяснят. На уроках царила теплая атмосфера, где комфортно, где можно и
+                                шутить и
+                                быть серьезными, а главное-продуктивно работать. </p>
                         </li>
                     </ul>
-                    <div class="treners__button">
+                </div>
+                <!-- cтили в card.css -->
+            </section>
+            <!-- cтили в treners.css -->
+            <section class="section--treners" id="trener">
+                <h2 class="treners__title section__title">Наши преподаватели</h2>
+                <ul class="treners__card">
+                    <li class="treners__item">
+                        <img src="images/chelovec u ob.png" alt="Тренер Анатолий Сергеевич" class="treners__img">
+                        <h3 class="treners__subtitle">АНАТОЛИЙ СЕРГЕЕВИЧ</h3>
+                        <p class="treners__test">преподаватель по блоку "Человек и общество"</p>
+                        <button class="treners__link" type="button">Подробнее</button>
+                    </li>
+                    <li class="treners__item">
+                        <img src="images/politica.png" alt="Тренер Марина Алексанровна" class="treners__img">
+                        <h3 class="treners__subtitle">МАРИНА АЛЕКСАНДРОВНА </h3>
+                        <p class="treners__test">преподаватель по "Политике"</p>
+                        <button class="treners__link" type="button">Подробнее</button>
+                    </li>
+                    <li class="treners__item">
+                        <img src="images/repit economica.png" alt="Тренер Полина Андреевна" class="treners__img">
+                        <h3 class="treners__subtitle">ПОЛИНА АНДРЕЕВНА</h3>
+                        <p class="treners__test">преподаватель по "Экономике"</p>
+                        <button class="treners__link">Подробнее</button>
+                    </li>
+                    <li class="treners__item">
+                        <img src="images/sociologia.png" alt="Тренер Сергей Викторович" class="treners__img">
+                        <h3 class="treners__subtitle">СЕРГЕЙ ВИКТОРОВИЧ</h3>
+                        <p class="treners__test">преподаватель по "Социологии"</p>
+                        <button class="treners__link">Подробнее</button>
+                    </li>
+                    <li class="treners__item">
+                        <img src="images/pravo.png" alt="Тренер Дмитрий Алексеевич" class="treners__img">
+                        <h3 class="treners__subtitle">ДМИТРИЙ АЛЕКСЕЕВИЧ</h3>
+                        <p class="treners__test">преподаватель по "Праву"</p>
+                        <button class="treners__link">Подробнее</button>
+                    </li>
+                </ul>
+                <div class="treners__button">
 
-                        <button class="treners__right">
-                            <img src="images/right.svg" alt="" class="treners__right-swiper">
-                        </button>
-                        <button class="treners__left">
-                            <img src="images/left.svg" alt="" class="treners__left-swiper">
-                        </button>
-                    </div>
-                </section>
-                <!-- cтили в treners.css -->
-                <!-- cтили в price.css -->
-                <section class="section cost">
-                    <div class="cost__photo">
-                        <h2 class="cost__title section__title">Сколько стоят занятия? </h2>
-                        <p class="cost__description">Цена составляет от 1200 - 2000 р. за урок. Все занятия проводятся
-                            индивидуально онлайн, и программа формируется с учётом уровня знаний ребёнка и ваших
-                            пожеланий.</p>
-                        <button class="button" name="button">Хочу попробовать</button>
-                        <img class="cost__image" src="images/cost.png" alt="стоимость занятий" width="594" height="420">
-                    </div>
-                </section>
-                <!-- cтили в price.css -->
-            </main>
+                    <button class="treners__right">
+                        <img src="images/right.svg" alt="" class="treners__right-swiper">
+                    </button>
+                    <button class="treners__left">
+                        <img src="images/left.svg" alt="" class="treners__left-swiper">
+                    </button>
+                </div>
+            </section>
+            <!-- cтили в treners.css -->
+            <!-- cтили в price.css -->
+            <section class="section cost">
+                <div class="cost__photo">
+                    <h2 class="cost__title section__title">Сколько стоят занятия? </h2>
+                    <p class="cost__description">Цена составляет от 1200 - 2000 р. за урок. Все занятия проводятся
+                        индивидуально онлайн, и программа формируется с учётом уровня знаний ребёнка и ваших
+                        пожеланий.</p>
+                    <button class="button" name="button">Хочу попробовать</button>
+                    <img class="cost__image" src="images/cost.png" alt="стоимость занятий" width="594" height="420">
+                </div>
+            </section>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img class="swiper__img" src="images/sertif 1.jpg"></div>
+                  <div class="swiper-slide"><img class="swiper__img" src="images/sertif 1.jpg"> </div>
+                  <div class="swiper-slide"><img class="swiper__img" src="images/sertif 1.jpg"> </div>
+                  <div class="swiper-slide"><img class="swiper__img" src="images/sertif 1.jpg"> </div>
+                  <div class="swiper-slide"> <img class="swiper__img" src="images/sertif 1.jpg"></div>
+                  <div class="swiper-slide"><img class="swiper__img" src="images/sertif 1.jpg"> </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+        </main>
 
-            <!-- Форма "Войти" -->
-            <!-- Модальное окно -->
-            <div class="login-popup" id="login-popup" hidden>
-                <div class="popup-content">
-                    <button class="close-btn" id="close-btn">×</button>
-                    <h2 class="info-modal"><span>Войти</span></h2>
-                    <form>
-                        <input type="text" placeholder="Логин" class="input-field" />
+        <!-- Форма "Войти" -->
+        <!-- Модальное окно -->
+        <div class="login-popup" id="login-popup" hidden>
+            <div class="popup-content">
+                <button class="close-btn" id="close-btn">×</button>
+                <h2 class="info-modal"><span>Войти</span></h2>
+                <form>
+                    <input type="text" placeholder="Логин" class="input-field" />
+                    <input type="password" placeholder="Пароль" class="input-field" />
+                    <div class="buttons">
+                        <button type="submit" class="btn-login">Войти</button>
+                        <button type="button" class="btn-cancel" id="cancel-btn">Отмена</button>
+                    </div>
+
+                </form>
+                <p class="no-account">У меня еще нет аккаунта</p>
+            </div>
+        </div>
+        <!--/ Форма "Войти" -->
+
+        <!-- Модальное окно для регистрации -->
+        <div class="register-popup" id="register-popup" hidden>
+            <div class="popup-content">
+                <button class="close-btn-reg" id="close-btn-reg">×</button>
+                <h2 class="info-modal"><span>Регистрация</span></h2>
+                <form>
+                    <input type="text" placeholder="Имя" class="input-field" />
+                    <input type="text" placeholder="Логин" class="input-field" />
+                    <div class="password-block">
                         <input type="password" placeholder="Пароль" class="input-field" />
-                        <div class="buttons">
-                            <button type="submit" class="btn-login">Войти</button>
-                            <button type="button" class="btn-cancel" id="cancel-btn">Отмена</button>
-                        </div>
-
-                    </form>
-                    <p class="no-account">У меня еще нет аккаунта</p>
-                </div>
+                        <input type="password" placeholder="Повторите пароль" class="input-field" />
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="btn-register">Зарегистрироваться</button>
+                        <button type="button" class="btn-cancel" id="cancel-register-btn">Отмена</button>
+                    </div>
+                </form>
+                <p class="already-account">У меня уже есть аккаунт</p>
             </div>
-            <!--/ Форма "Войти" -->
-
-            <!-- Модальное окно для регистрации -->
-            <div class="register-popup" id="register-popup" hidden>
-                <div class="popup-content">
-                    <button class="close-btn-reg" id="close-btn-reg">×</button>
-                    <h2 class="info-modal"><span>Регистрация</span></h2>
-                    <form>
-                        <input type="text" placeholder="Имя" class="input-field" />
-                        <input type="text" placeholder="Логин" class="input-field" />
-                        <div class="password-block">
-                            <input type="password" placeholder="Пароль" class="input-field" />
-                            <input type="password" placeholder="Повторите пароль" class="input-field" />
-                        </div>
-                        <div class="buttons">
-                            <button type="submit" class="btn-register">Зарегистрироваться</button>
-                            <button type="button" class="btn-cancel" id="cancel-register-btn">Отмена</button>
-                        </div>
-                    </form>
-                    <p class="already-account">У меня уже есть аккаунт</p>
-                </div>
-            </div>
-
-            <!-- Подвал -->
-            <footer class="footer container">
-                <a class="footer__logo logo">Repetitor DI</a>
-                <p class="footer__copy"><span>Контактная информация: Иванова Д.Ш.</span></p>
-                <p class="footer__copy">Email: disha0104@mail.ru</p>
-                <span class="footer__copy">8-950-313-38-30</span>
-            </footer>
         </div>
 
-        <script src="js/script.js"></script>
+        <!-- Подвал -->
+        <footer class="footer container">
+            <a class="footer__logo logo">Repetitor DI</a>
+            <p class="footer__copy"><span>Контактная информация: Иванова Д.Ш.</span></p>
+            <p class="footer__copy">Email: disha0104@mail.ru</p>
+            <span class="footer__copy">8-950-313-38-30</span>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
