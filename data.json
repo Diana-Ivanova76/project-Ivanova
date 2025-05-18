@@ -1,6 +1,6 @@
 [
    {
-        "image": "images/e-learning.png",
+        "image": "local/templates/template_st22012884/images/e-learning.png",
         "imageAlt": "Иконка для индивидуальных занятий",
         "imageWidth": 22,
         "imageHeight": 24,
@@ -9,7 +9,7 @@
     },
 
     {
-        "image": "images/messaging-.png",
+        "image": "local/templates/template_st22012884/images/messaging-.png",
         "imageAlt": "Иконка для профессиональных преподавателей",
         "imageWidth": 24,
         "imageHeight": 24,
@@ -18,7 +18,7 @@
     },
     
     {
-        "image": "images/survey--v1.png",
+        "image": "local/templates/template_st22012884/images/survey--v1.png",
         "imageAlt": "Иконка для удобства дистанционного обучения",
         "imageWidth": 24,
         "imageHeight": 23,
@@ -27,7 +27,7 @@
     },
 
     {   
-        "image": "images/cheque.png",
+        "image": "local/templates/template_st22012884/images/cheque.png",
         "imageAlt": "Иконка для стоимости занятий",
         "imageWidth": 24,
         "imageHeight": 23,

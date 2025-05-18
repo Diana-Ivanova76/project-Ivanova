@@ -1,0 +1,11 @@
+.swiper {
+    width: 1200px;
+}
+.swiper_img {
+
+    width: 100px;
+    height: 300px;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

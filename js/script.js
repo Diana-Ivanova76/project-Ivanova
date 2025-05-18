@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeLoginButton.addEventListener("click", () => {
         loginStyle.setAttribute("hidden", true);
     });
-
+    
     const headerRegisterationButton = document.querySelector(".registeration-button");
     const registerStyle = document.querySelector(".register-popup");
     if (headerRegisterationButton && registerStyle) {
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.target === registerStyle) {
             registerStyle.setAttribute("hidden", true);
         }
-    });
+    }); 
     // Закрытие модального окна при клике на кнопку закрытия 
     const closeRegisterationButton = document.querySelector(".close-btn-reg");
     closeRegisterationButton.addEventListener("click", () => {
@@ -272,5 +272,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+         slidesPerView: 4,
+         spaceBetween: 50,
+        loop: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
 
-});
+})
+
